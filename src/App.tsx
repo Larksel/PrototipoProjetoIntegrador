@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 
 export default function App() {
-  const { fontSize, changeFontSize, toggleTheme } = useContext(ThemeContext);
+  const { fontSize, changeFontSize, toggleTheme } = useContext(ThemeContext)
 
   return (
     <div className='flex flex-col text-text bg-background h-screen p-8 *:transition-all'>
