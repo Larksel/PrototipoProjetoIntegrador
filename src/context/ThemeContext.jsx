@@ -25,7 +25,12 @@ export function ThemeProvider({ children }) {
     if (newFontSize < 0) newFontSize = 0; // Impede número negativo
     setFontSize(newFontSize);
     localStorage.setItem('fontSize', newFontSize);
-    document.documentElement.setAttribute('data-fontSize', newFontSize);
+
+    // Atualiza a variável CSS do tamanho da fonte
+    document.documentElement.style.setProperty(
+      '--font-size',
+      `${newFontSize}px`
+    );
   };
 
   return (
