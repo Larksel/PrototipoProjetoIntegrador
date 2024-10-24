@@ -12,7 +12,10 @@ export function ThemeProvider({ children }) {
     setTheme(savedTheme);
     setFontSize(savedFontSize);
     document.documentElement.setAttribute('data-theme', savedTheme);
-    document.documentElement.setAttribute('data-fontSize', savedFontSize);
+    document.documentElement.style.setProperty(
+      '--font-size',
+      `${savedFontSize}px`
+    );
   }, []);
 
   const toggleTheme = (newTheme) => {
