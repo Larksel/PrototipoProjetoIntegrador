@@ -23,7 +23,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const [fontSize, setFontSize] = useState(16); // Tamanho da fonte em pixels
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') ?? 'light';
     const savedFontSize = Number(localStorage.getItem('fontSize')) || 16;
     setTheme(savedTheme);
     setFontSize(savedFontSize);
