@@ -24,7 +24,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
-    const savedFontSize = Number(localStorage.getItem('fontSize') || 16);
+    const savedFontSize = Number(localStorage.getItem('fontSize')) || 16;
     setTheme(savedTheme);
     setFontSize(savedFontSize);
     document.documentElement.setAttribute('data-theme', savedTheme);
